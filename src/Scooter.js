@@ -49,11 +49,4 @@ class Scooter{
   }
 }
 
-const newScooter = new Scooter("Airport")
-const newScooter2 = new Scooter("Airport", "Josh")
-
-console.table(newScooter)
-console.table(newScooter2)
-
-
 module.exports = Scooter
