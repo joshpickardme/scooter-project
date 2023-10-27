@@ -58,6 +58,7 @@ function rentingScooter(scooter) {
         console.log(" ")
         let option = prompt(chalk.green("Enter station to dock: "))
         console.log(app.dockScooter(scooter, option))
+        userOptions()
     } else {
         throw new Error("AHH")
     }
