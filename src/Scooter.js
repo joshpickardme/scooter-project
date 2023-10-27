@@ -1,8 +1,8 @@
 class Scooter{
   static nextSerial = 1;
-  constructor(station, user = null) {
+  constructor(station) {
     this.station = station;
-    this.user = user;
+    this.user = null;
     this.serial = Scooter.nextSerial;
     this.charge = 100
     this.isBroken = false
@@ -10,7 +10,7 @@ class Scooter{
     Scooter.nextSerial++
   }
   rent(user) {
-    if(this.charge > 20 && this.isBroken) {
+    if(this.charge > 20 || this.isBroken) {
       console.log(`Scooter checked out from ${this.station}`)
       this.station = null;
       this.user = user;
@@ -23,7 +23,6 @@ class Scooter{
     }
   }
   dock(station) {
-    console.log(`${this.user} has docked the scooter at ${station}`)
     this.user = null
     this.station = station
   }

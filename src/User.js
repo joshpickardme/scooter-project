@@ -6,6 +6,9 @@ class User {
     this.age = age;
     this.#loggedIn = false;
   }
+  checkLoggedIn() {
+    return this.#loggedIn
+  }
   login(password) {
       if(password === this.password) {
         this.#loggedIn = true
