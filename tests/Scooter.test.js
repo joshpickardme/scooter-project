@@ -12,6 +12,7 @@ describe('scooter object', () => {
 //Method tests
 describe('scooter methods', () => {
   // tests here!
+  test('')
 
   //rent method
   
